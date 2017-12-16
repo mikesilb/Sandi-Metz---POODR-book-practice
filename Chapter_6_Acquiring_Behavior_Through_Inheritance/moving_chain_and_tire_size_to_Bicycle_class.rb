@@ -1,7 +1,9 @@
 class Bicycle
-  attr_reader :size
+  attr_reader :size, :chain, :tire_size
   def initialize(args)
     @size = args[:size]
+    @chain = args[:chain]
+    @tire_size = args[:tire_size]
   end
 end
 
@@ -18,9 +20,7 @@ class RoadBike < Bicycle
   # every bike has the same defaults for
   # tire and chain size
   def spares
-    {chain: '10-speed',
-      tire_size: '23',
-      tape_color: tape_color}
+    {tape_color: tape_color}
   end
 end
 
@@ -41,4 +41,4 @@ road_bike.size
 
 mountain_bike = MountainBike.new(size: 'S', front_shock: 'Manitou', rear_shock: 'Fox')
 mountain_bike.size
-mountain_bike.spares #Will not work
+mountain_bike.spares #Still won't work
