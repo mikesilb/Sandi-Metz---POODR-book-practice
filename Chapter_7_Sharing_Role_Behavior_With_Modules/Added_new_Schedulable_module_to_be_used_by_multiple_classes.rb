@@ -37,8 +37,32 @@ class Bicycle
   #...
 end
 
+class Vehicle
+  include Schedulable
+
+  def lead_days
+    3
+  end
+  #...
+
+end
+
+class Mechanic
+  include Schedulable
+
+  def lead_days
+    4
+  end
+  #...
+
+end
+
 require 'date'
 starting = Date.parse("2015/09/04")
 ending = Date.parse("2015/09/10")
 bike = Bicycle.new
-puts bike.schedulable?(starting, ending)
+bike.schedulable?(starting, ending)
+vehicle = Vehicle.new
+vehicle.schedulable?(starting, ending)
+mechanic = Mechanic.new
+mechanic.schedulable?(starting, ending)
