@@ -52,7 +52,7 @@ mountain_bike = Bicycle.new(
   size: 'L',
   parts: Parts.new([chain, mountain_tire, front_shock, rear_shock]))
 
-puts road_bike.spares.size
-puts road_bike.parts.size
-puts mountain_bike.spares.size
-puts mountain_bike.parts.size
+road_bike.spares.size
+road_bike.parts.size
+mountain_bike.spares.size
+mountain_bike.parts.size
