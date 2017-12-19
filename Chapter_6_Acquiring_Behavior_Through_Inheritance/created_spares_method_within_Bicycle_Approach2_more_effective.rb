@@ -54,6 +54,8 @@ end
 
 class MountainBike < Bicycle
 
+  attr_reader :front_shock, :rear_shock
+
   #NOTICE THAT THERE IS NO initialize method now!!!
 
   def post_initialize(args)
