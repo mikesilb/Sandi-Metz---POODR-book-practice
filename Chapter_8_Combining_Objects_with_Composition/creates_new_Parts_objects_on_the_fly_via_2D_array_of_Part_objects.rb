@@ -1,4 +1,3 @@
-require 'pry'
 class Bicycle
   attr_reader :size, :parts
   def initialize(args={})
