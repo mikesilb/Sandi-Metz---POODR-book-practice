@@ -50,6 +50,11 @@ mountain_config =
  ['front_shock',  'Manitou', false],
  ['rear_shock',   'Fox']]
 
+recumbent_config =
+[['chain',        '9-speed'],
+ ['tire_size',    '28'],
+ ['flag',  'tall and orange']]
+
 road_bike = Bicycle.new(
   size: 'L',
   parts: PartsFactory.build(road_config))
@@ -59,3 +64,7 @@ mountain_bike = Bicycle.new(
   size: 'L',
   parts: PartsFactory.build(mountain_config))
 mountain_bike.spares
+
+recumbent_bike = Bicycle.new(
+  size: 'L',
+  parts: PartsFactory.build(recumbent_config))
